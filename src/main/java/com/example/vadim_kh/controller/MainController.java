@@ -24,8 +24,9 @@ public class MainController {
         return "redirect:/";
     }
     @PostMapping("/{id}")
-    public String deletebyId(@PathVariable (name = "id") Long id){
+    public String deletebyId(@PathVariable ("id") Long id){
         customerREpo.deleteById(id);
         return "redirect:/";
     }
+
 }
